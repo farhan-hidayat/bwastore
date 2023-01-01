@@ -101,7 +101,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -116,7 +116,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -129,7 +129,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -142,7 +142,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -155,7 +155,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -168,7 +168,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="600">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -181,7 +181,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="700">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="
@@ -196,7 +196,7 @@
                         </a>
                     </div>
                     <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="800">
-                        <a href="/details.html" class="component-products d-block">
+                        <a href="{{ url('details/1') }}" class="component-products d-block">
                             <div class="products-thumbnail">
                                 <div class="products-image"
                                     style="

@@ -13,7 +13,7 @@
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a href="/index.html">Home</a>
+                                    <a href="{{ route('home') }}">Home</a>
                                 </li>
                                 <li class="breadcrumb-item active">Product Details</li>
                             </ol>
@@ -57,7 +57,7 @@
                             <div class="price">$1,410</div>
                         </div>
                         <div class="col-lg-2" data-aos="zoom-in">
-                            <a href="/cart.html" class="btn btn-success px-4 text-white btn-block mb-3">Add to Cart
+                            <a href="{{ route('cart') }}" class="btn btn-success px-4 text-white btn-block mb-3">Add to Cart
                             </a>
                         </div>
                     </div>
