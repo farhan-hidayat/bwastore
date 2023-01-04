@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\{
+    DashboardController,
+    CategoryController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +37,15 @@ Route::get('/dashboard/transactions/{id}', [App\Http\Controllers\DashboardTransa
 
 Route::get('/dashboard/settings', [App\Http\Controllers\DashboardSettingController::class, 'index'])->name('dashboard-settings');
 Route::get('/dashboard/account', [App\Http\Controllers\DashboardSettingController::class, 'account'])->name('dashboard-settings-account');
+
+Route::prefix('admin')
+    // ->namespace('Admin')
+    // ->middleware(['auth', 'admin'])
+    ->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
+        Route::resource('category', CategoryController::class);
+        // Route::resource('product', 'ProductController');
+        // Route::resource('user', 'UserController');
+    });
 
 Auth::routes();
