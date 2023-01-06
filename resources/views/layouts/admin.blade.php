@@ -22,7 +22,7 @@
             <!-- Sidebar -->
             <div class="border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading text-center">
-                    <img src="/images/admin.png" alt="" class="my-4" style="max-width: 150px" />
+                    <img src="/images/admin.gif" alt="" class="my-4" style="max-width: 150px" />
                 </div>
                 <div class="list-group list-group-flush">
                     <a href="{{ route('admin-dashboard') }}"
@@ -39,7 +39,8 @@
                     <a href="{{ url('dashboard/transactions') }}" class="list-group-item list-group-item-action">
                         Transactions
                     </a>
-                    <a href="{{ url('dashboard/account') }}" class="list-group-item list-group-item-action">
+                    <a href="{{ route('user.index') }}"
+                        class="list-group-item list-group-item-action {{ request()->is('admin/user*') ? 'active' : '' }}">
                         Users
                     </a>
                     <a href="{{ route('home') }}" class="list-group-item list-group-item-action">

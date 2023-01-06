@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\{
     DashboardController,
-    CategoryController
+    CategoryController,
+    UserController,
+    ProductController
 };
 
 /*
@@ -44,8 +46,8 @@ Route::prefix('admin')
     ->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('admin-dashboard');
         Route::resource('category', CategoryController::class);
-        // Route::resource('product', 'ProductController');
-        // Route::resource('user', 'UserController');
+        Route::resource('user', UserController::class);
+        Route::resource('product', ProductController::class);
     });
 
 Auth::routes();
