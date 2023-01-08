@@ -38,8 +38,8 @@
                                             <div class="form-group">
                                                 <label>Pemilik Product</label>
                                                 <select name="users_id" class="form-control">
+                                                    <option value=""> -Pilih Pemilik- </option>
                                                     @foreach ($users as $user)
-                                                        <option value=""> -Pilih Pemilik- </option>
                                                         <option value="{{ $user->id }}">{{ $user->name }}</option>
                                                     @endforeach
                                                 </select>
@@ -49,8 +49,8 @@
                                             <div class="form-group">
                                                 <label>Ketegori Product</label>
                                                 <select name="categories_id" class="form-control">
+                                                    <option value=""> -Pilih Kategori- </option>
                                                     @foreach ($categories as $category)
-                                                        <option value=""> -Pilih Kategori- </option>
                                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                     @endforeach
                                                 </select>
