@@ -48,9 +48,6 @@
                         class="list-group-item list-group-item-action {{ request()->is('admin/user*') ? 'active' : '' }}">
                         Users
                     </a>
-                    <a href="{{ route('home') }}" class="list-group-item list-group-item-action">
-                        Sign Out
-                    </a>
                 </div>
             </div>
 
@@ -73,20 +70,27 @@
                                         data-toggle="dropdown">
                                         <img src="/images/icon-user.png" alt="Icon User"
                                             class="rounded-circle mr-2 profile-picture" />
-                                        Hi, Farhan
+                                        Hi, {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a href="/" class="dropdown-item">Logout</a>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();"
+                                            class="dropdown-item">Logout</a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
                                     </div>
                                 </li>
                             </ul>
                             <!-- Mobile Menu-->
                             <ul class="navbar-nav d-block d-lg-none">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link"> Hi, Farhan </a>
+                                    <a href="#" class="nav-link"> Hi, {{ Auth::user()->name }} </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link d-inline-block"> Cart </a>
+                                    <a href="{{ route('cart') }}" class="nav-link d-inline-block"> Cart </a>
                                 </li>
                             </ul>
                         </div>
