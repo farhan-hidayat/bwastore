@@ -28,72 +28,50 @@
                     <div class="tab-pane fade show active" id="sell" role="tabpanel" aria-labelledby="sell-tab">
                         <div class="row">
                             <div class="col-12 mt-2">
-                                <a href="/dashboard-transactions-details.html" class="card card-list d-block">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-1">
-                                                <img src="/images/dashboard-icon-product-1.png" class="w-50" />
-                                            </div>
-                                            <div class="col-md-4">Apple Watch Series 5</div>
-                                            <div class="col-md-3">Farhan</div>
-                                            <div class="col-md-3">22 Agustus, 2020</div>
-                                            <div class="col-md-1 d-none d-md-block">
-                                                <img src="/images/dashboard-arrow-right.svg" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="/dashboard-transactions-details.html" class="card card-list d-block">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-1">
-                                                <img src="/images/dashboard-icon-product-2.png" class="w-50" />
-                                            </div>
-                                            <div class="col-md-4">Apple Watch Series 5</div>
-                                            <div class="col-md-3">Farhan</div>
-                                            <div class="col-md-3">22 Agustus, 2020</div>
-                                            <div class="col-md-1 d-none d-md-block">
-                                                <img src="/images/dashboard-arrow-right.svg" />
+                                @foreach ($sellTransactions as $transaction)
+                                    <a href="{{ route('dashboard-transactions-details', $transaction->id) }}"
+                                        class="card card-list d-block">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <img src="{{ Storage::url($transaction->product->galleries->first()->photo ?? '') }}"
+                                                        class="w-50" />
+                                                </div>
+                                                <div class="col-md-4">{{ $transaction->product->name }}</div>
+                                                <div class="col-md-3">{{ $transaction->transaction->user->name }}</div>
+                                                <div class="col-md-3">{{ $transaction->created_at }}</div>
+                                                <div class="col-md-1 d-none d-md-block">
+                                                    <img src="/images/dashboard-arrow-right.svg" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                                <a href="/dashboard-transactions-details.html" class="card card-list d-block">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-1">
-                                                <img src="/images/dashboard-icon-product-3.png" class="w-50" />
-                                            </div>
-                                            <div class="col-md-4">Apple Watch Series 5</div>
-                                            <div class="col-md-3">Farhan</div>
-                                            <div class="col-md-3">22 Agustus, 2020</div>
-                                            <div class="col-md-1 d-none d-md-block">
-                                                <img src="/images/dashboard-arrow-right.svg" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="buy" role="tabpanel" aria-labelledby="buy-tab">
                         <div class="row">
                             <div class="col-12 mt-2">
-                                <a href="/dashboard-transactions-details.html" class="card card-list d-block">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-1">
-                                                <img src="/images/dashboard-icon-product-1.png" class="w-50" />
-                                            </div>
-                                            <div class="col-md-4">Apple Watch Series 5</div>
-                                            <div class="col-md-3">Farhan</div>
-                                            <div class="col-md-3">22 Agustus, 2020</div>
-                                            <div class="col-md-1 d-none d-md-block">
-                                                <img src="/images/dashboard-arrow-right.svg" />
+                                @foreach ($buyTransactions as $transaction)
+                                    <a href="{{ route('dashboard-transactions-details', $transaction->id) }}"
+                                        class="card card-list d-block">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <img src="{{ Storage::url($transaction->product->galleries->first()->photo ?? '') }}"
+                                                        class="w-50" />
+                                                </div>
+                                                <div class="col-md-4">{{ $transaction->product->name }}</div>
+                                                <div class="col-md-3">{{ $transaction->product->user->store_name }}</div>
+                                                <div class="col-md-3">{{ $transaction->created_at }}</div>
+                                                <div class="col-md-1 d-none d-md-block">
+                                                    <img src="/images/dashboard-arrow-right.svg" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                @endforeach
                             </div>
                         </div>
                     </div>
